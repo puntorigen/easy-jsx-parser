@@ -1,0 +1,44 @@
+{
+  "name": "easy-jsx-parser",
+  "version": "0.0.1",
+  "description": "Simple JSX tags parser that returns an easy to read object for every JSX tag",
+  "keywords": [
+    "jsx",
+    "convert",
+    "object",
+    "concepto",
+    "react",
+    "ast"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/puntorigen/easy-jsx-parser.git",
+  "author": {
+    "name": "Pablo Schaffner",
+    "email": "pablo@creador.cl",
+    "url": "http://www.pabloschaffner.cl"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "ava && tsd"
+  },
+  "files": [
+    "index.js",
+    "normalize-names.js",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "acorn": "8.8.1",
+    "acorn-jsx": "*",
+    "html-tag-names": "^1.1.5",
+    "is-string": "^1.0.5",
+    "style-to-object": "^0.3.0",
+    "svg-tag-names": "^2.0.1"
+  },
+  "devDependencies": {
+    "ava": "^3.5.1",
+    "tsd": "^0.11.0"
+  }
+}
