@@ -41,4 +41,4 @@ jsxToObj('<Test myProp={true}>My Child</Test>');
 
 ## License
 
-MIT © [Pablo Schaffner](https://www.pabloschaffner.cl)
+MIT © [Pablo Schaffner](https://www.github.com/puntorigen)
