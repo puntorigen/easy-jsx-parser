@@ -198,7 +198,7 @@ const getAttributeValue = (expression) => {
 
   if (expression.type === 'ArrowFunctionExpression') {
     //console.log('ArrowFunctionExpression expression',expression,sourceCode);
-    const source = sourceCode.slice(expression.start-6, expression.end-4);
+    const source = sourceCode.slice(expression.start-6, expression.end-6);
     return source;
   }
 
@@ -287,6 +287,7 @@ const jsxToObj_ = (input) => {
 
 const jsxToObj = (input) => {
   let temp = jsxToObj_(input);
+  //console.log('temp',temp);
   let obj = {};
   if (temp.length==0) return obj;
   if (Array.isArray(temp[0])==false) {
@@ -300,6 +301,7 @@ const jsxToObj = (input) => {
     if (temp[1]) obj[temp[0]] = temp[1];
     if (temp[2]) obj[temp[0]].children = temp[2];
   }
+  //console.log('obj',obj);
   return obj;
 };
 

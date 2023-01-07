@@ -1,6 +1,6 @@
 # easy-jsx-parser
 
-[![Build Status](https://travis-ci.org/gglnx/easy-jsx-parser?branch=main)](https://travis-ci.org/gglnx/easy-jsx-parser) [![npm version](https://img.shields.io/npm/v/easy-jsx-parser)](https://www.npmjs.com/package/easy-jsx-parser) ![npm downloads](https://img.shields.io/npm/dm/easy-jsx-parser)
+[![npm version](https://img.shields.io/npm/v/easy-jsx-parser)](https://www.npmjs.com/package/easy-jsx-parser) ![npm downloads](https://img.shields.io/npm/dm/easy-jsx-parser)
 
 > Simple JSX tags parser that returns an easy to read object for every JSX tag
 
