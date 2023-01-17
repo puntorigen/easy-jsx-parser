@@ -38,6 +38,7 @@ jsxToObj('<Test myProp={true}>My Child</Test>');
 * `<>Test</>`: Fragments
 * HTML/SVG DOM attributes are converted to correct React equivalent (`class` -> `className`)
 * `<Test myProp={(data)=>console.log(data)}>`: Objects with string keys and arrow functions support
+* `<Nested><Child></Child></Nested>`: Unlimited nested JSX tags support
 
 ## License
 
