@@ -288,19 +288,24 @@ const jsxToObj_ = (input) => {
 const jsxToObj = (input) => {
   let temp = jsxToObj_(input);
   //console.log('temp',temp);
-  let obj = {};
-  if (temp.length==0) return obj;
-  if (Array.isArray(temp[0])==false) {
-    //temp = temp[0];
-    obj[temp[0]] = {};
-    if (temp[1]) obj[temp[0]] = temp[1];
-    if (temp[2]) obj[temp[0]].children = temp[2];
-  } else if (Array.isArray(temp[0])==true) {
-    temp = temp[0];
-    obj[temp[0]] = {};
-    if (temp[1]) obj[temp[0]] = temp[1];
-    if (temp[2]) obj[temp[0]].children = temp[2];
-  }
+  const arr2obj = (temp) => {
+    let obj = {};
+    if (typeof temp == 'string') return temp;
+    if (temp.length==0) return obj;
+    if (Array.isArray(temp[0])==false) {
+      //temp = temp[0];
+      obj[temp[0]] = {};
+      if (temp[1]) obj[temp[0]] = temp[1];
+      if (temp[2]) obj[temp[0]].children = arr2obj(temp[2]);
+    } else if (Array.isArray(temp[0])==true) {
+      temp = temp[0];
+      obj[temp[0]] = {};
+      if (temp[1]) obj[temp[0]] = temp[1];
+      if (temp[2]) obj[temp[0]].children = arr2obj(temp[2]);
+    }
+    return obj;
+  };
+  const obj = arr2obj(temp);
   //console.log('obj',obj);
   return obj;
 };

@@ -7,6 +7,7 @@ test('main', (t) => {
   t.deepEqual(jsxToObj('Test'), {'Test':{} });
   t.deepEqual(jsxToObj('<>Test</>'), {'Fragment': { children:'Test' } });
   t.deepEqual(jsxToObj('<Test onload={(data)=>console.log(data)} />'), {'Test': { onload:'(data)=>console.log(data)' } });
+  t.deepEqual(jsxToObj('<Nested bold={true}><Child number={1}>Son</Child></Nested>'), {'Nested': { bold:true, children:{'Child':{ number:1, children:'Son' }} } });
   /*
   t.deepEqual(jsxToObj('<Test></Test>'), [['Test', {}]]);
   t.deepEqual(jsxToObj('<Test>Test</Test>'), [['Test', {}, 'Test']]);
